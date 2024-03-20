@@ -1,12 +1,11 @@
-from flask import Flask
-import os
+from flask import Flask, render_template
 # creating Flask Obj reference
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return str(os.getcwd())+" Hai"
+    return render_template('login.html')
 
 
 if __name__ == '__main__':
